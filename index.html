@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل العملات الرقمية | خالد دراغة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>محلل العملات الرقمية</h1>
+            <div class="controls">
+                <div class="time-filter">
+                    <select id="timeFrame">
+                        <option value="1">1 دقيقة</option>
+                        <option value="3">3 دقائق</option>
+                        <option value="5">5 دقائق</option>
+                        <option value="10">10 دقائق</option>
+                        <option value="15">15 دقيقة</option>
+                        <option value="20">20 دقيقة</option>
+                        <option value="30">30 دقيقة</option>
+                        <option value="custom">تحديد يدوي...</option>
+                    </select>
+                    <div id="customTime" class="custom-time">
+                        <input type="number" min="1" max="60" placeholder="أدخل الوقت بالدقائق">
+                    </div>
+                </div>
+                <button id="refresh" class="refresh-btn">
+                    <i class="bi bi-arrow-clockwise refresh-icon"></i>
+                    تحديث البيانات
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="crypto-sections">
+                <section id="lowPriceSection">
+                    <h2 class="section-title">
+                        <i class="bi bi-currency-dollar"></i>
+                        العملات أقل من 1 دولار
+                    </h2>
+                    <div class="crypto-list" id="lowPriceCryptoList">
+                        <div class="loading">جاري التحليل... ⏳</div>
+                    </div>
+                </section>
+
+                <section id="highPriceSection">
+                    <h2 class="section-title">
+                        <i class="bi bi-currency-bitcoin"></i>
+                        العملات الأخرى
+                    </h2>
+                    <div class="crypto-list" id="highPriceCryptoList">
+                        <div class="loading">جاري التحليل... ⏳</div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>جميع الحقوق محفوظة © 2024 خالد دراغة</p>
+            <p>للتواصل: <a href="mailto:gsmkhaledtiaret@gmail.com">gsmkhaledtiaret@gmail.com</a></p>
+            <p class="disclaimer">تنبيه: هذا التحليل للأغراض المعلوماتية فقط وليس نصيحة استثمارية</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
